@@ -105,7 +105,7 @@ public class Server {
 
             final var pathHandlers = handlers.get(method);
             if (pathHandlers != null) {
-                final var handler = pathHandlers.get(path);
+                final var handler = pathHandlers.get(request.getPath());
                 if (handler != null) {
                     handler.handle(request, out);
                     return;
